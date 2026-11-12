@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="ru" class="js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ЦентрАвто — автосервис в Абакане, Промышленная, 31в</title>
+<meta name="description" content="Автосервис ЦентрАвто в Абакане: ремонт подвески и двигателя, развал-схождение 3D, замена масла, кондиционеры, автоэлектрика, запчасти. Обслуживание автопарков организаций. Пн–Сб 9:00–18:00.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0d0f11">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ЦентрАвто — машина снова едет ровно">
+<meta property="og:description" content="Автосервис на Промышленной, 31в. Подвеска, двигатель, развал-схождение 3D. 4,7 в 2ГИС, 259 отзывов.">
+<meta property="og:image" content="https://k-sined.github.io/centravto-demo/assets/img/og.jpg">
+<meta property="og:url" content="https://k-sined.github.io/centravto-demo/">
+<link rel="icon" href="assets/img/mark.svg" type="image/svg+xml">
+<link rel="preload" href="assets/img/hero-wide.webp" as="image" media="(min-aspect-ratio: 4/5)">
+<link rel="preload" href="assets/img/hero-tall.webp" as="image" media="(max-aspect-ratio: 4/5)">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="top" id="top">
+ <div class="wrap top-in">
+  <a class="logo" href="#hero" aria-label="ЦентрАвто — наверх">
+   <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 3v8M20 29v8M3 20h8M29 20h8" stroke="currentColor" stroke-width="2"/></svg>
+   <span>ЦентрАвто</span>
+  </a>
+  <nav class="nav" aria-label="Разделы">
+   <a href="#simptom">Что с машиной</a>
+   <a href="#uslugi">Услуги и цены</a>
+   <a href="#park">Автопаркам</a>
+   <a href="#otzyvy">Отзывы</a>
+   <a href="#kontakty">Контакты</a>
+  </nav>
+  <a class="top-tel" href="tel:+79020111156">+7 902 011-11-56</a>
+  <a class="btn btn-s" href="#zapis"><span>Записаться</span></a>
+  <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Открыть меню"><i></i><i></i></button>
+ </div>
+ <div class="menu" id="menu" hidden>
+  <div class="wrap menu-in">
+   <a href="#simptom">Что с машиной</a>
+   <a href="#uslugi">Услуги и цены</a>
+   <a href="#park">Автопаркам</a>
+   <a href="#otzyvy">Отзывы</a>
+   <a href="#kontakty">Контакты</a>
+   <a class="menu-tel" href="tel:+79020111156">+7 902 011-11-56</a>
+  </div>
+ </div>
+</header>
+
+<main>
+<!-- ПЕРВЫЙ ЭКРАН -->
+<section class="hero" id="hero">
+ <picture class="hero-media">
+  <source media="(max-aspect-ratio: 4/5)" srcset="assets/img/hero-tall.webp" width="1024" height="1536">
+  <img class="hero-img" src="assets/img/hero-wide.webp" width="1536" height="1024" alt="Кроссовер на подъёмнике в боксе ЦентрАвто вечером, под днищем горит лампа-переноска" fetchpriority="high">
+ </picture>
+ <div class="wrap hero-in">
+  <p class="eyebrow h-fade">Автосервис · Абакан, Промышленная, 31в</p>
+  <h1 class="hero-title" aria-label="Машина снова едет ровно">
+   <span class="ln"><span>Машина</span></span>
+   <span class="ln"><span>снова&nbsp;едет</span></span>
+   <span class="ln"><span class="acc">ровно.</span></span>
+  </h1>
+  <p class="hero-lead h-fade">Подвеска, двигатель, развал-схождение 3D. Японские машины знаем особенно хорошо&nbsp;— так пишут клиенты.</p>
+  <div class="hero-cta h-fade">
+   <a class="btn" href="#zapis"><span>Записаться за&nbsp;20&nbsp;секунд</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+   <a class="btn btn-ghost" href="#simptom"><span>Что с машиной?</span></a>
+  </div>
+ </div>
+ <div class="wrap hero-meta h-fade">
+  <div class="gauge" aria-label="Схождение после регулировки: ноль градусов">
+   <span class="g-k">схождение</span>
+   <span class="g-v" id="gauge">0°47′</span>
+   <span class="g-bar"><i id="gaugeBar"></i></span>
+  </div>
+  <dl class="hero-facts">
+   <div><dt>2ГИС</dt><dd>4,7 · 259&nbsp;отзывов</dd></div>
+   <div><dt>Сегодня</dt><dd id="openNow">Пн–Сб 9:00–18:00</dd></div>
+  </dl>
+ </div>
+</section>
+
+<!-- ЧТО С МАШИНОЙ -->
+<section class="sym" id="simptom">
+ <div class="wrap">
+  <div class="sec-head">
+   <p class="eyebrow">01 · Диагноз</p>
+   <h2 class="h2">Что с&nbsp;машиной?</h2>
+   <p class="lead">Выберите, что беспокоит,&nbsp;— покажем, что сделаем и&nbsp;сколько это стоит. Записаться можно сразу из&nbsp;карточки.</p>
+  </div>
+  <div class="sym-grid">
+   <div class="sym-list" id="symList" role="tablist" aria-label="Симптомы">
+    <button type="button" role="tab" aria-selected="true" data-i="0"><span class="n">01</span><span class="t">Уводит в&nbsp;сторону, руль стоит криво</span></button>
+    <button type="button" role="tab" aria-selected="false" data-i="1"><span class="n">02</span><span class="t">Стучит или брякает подвеска</span></button>
+    <button type="button" role="tab" aria-selected="false" data-i="2"><span class="n">03</span><span class="t">Пора менять масло</span></button>
+    <button type="button" role="tab" aria-selected="false" data-i="3"><span class="n">04</span><span class="t">Кондиционер не&nbsp;холодит</span></button>
+    <button type="button" role="tab" aria-selected="false" data-i="4"><span class="n">05</span><span class="t">Бьёт в&nbsp;руль при торможении</span></button>
+    <button type="button" role="tab" aria-selected="false" data-i="5"><span class="n">06</span><span class="t">Двигатель троит, плохо заводится</span></button>
+    <button type="button" role="tab" aria-selected="false" data-i="6"><span class="n">07</span><span class="t">Горит «Check Engine»</span></button>
+    <button type="button" role="tab" aria-selected="false" data-i="7"><span class="n">08</span><span class="t">Не&nbsp;крутит стартер, не&nbsp;заряжает</span></button>
+   </div>
+
+   <div class="sym-stage" id="symStage">
+    <figure class="ss is-on"><img src="assets/img/s-align.webp" width="1024" height="1280" alt="Мишень 3D-стенда на колесе кроссовера"></figure>
+    <figure class="ss"><img src="assets/img/s-susp.webp" width="1024" height="1280" alt="Замена амортизационной стойки" loading="lazy"></figure>
+    <figure class="ss"><img src="assets/img/s-oil.webp" width="1024" height="1280" alt="Замена моторного масла" loading="lazy"></figure>
+    <figure class="ss"><img src="assets/img/s-ac.webp" width="1024" height="1280" alt="Станция заправки кондиционера подключена к машине" loading="lazy"></figure>
+    <figure class="ss"><img src="assets/img/s-brake.webp" width="1024" height="1280" alt="Проточка тормозного диска без снятия" loading="lazy"></figure>
+    <figure class="ss"><img src="assets/img/s-inject.webp" width="1024" height="1280" alt="Промывка топливных форсунок на стенде" loading="lazy"></figure>
+    <figure class="ss"><img src="assets/img/s-diag.webp" width="1024" height="1280" alt="Компьютерная диагностика через разъём OBD" loading="lazy"></figure>
+    <figure class="ss"><img src="assets/img/s-elec.webp" width="1024" height="1280" alt="Стартер и генератор на верстаке" loading="lazy"></figure>
+   </div>
+
+   <div class="sym-card" id="symCard" aria-live="polite">
+    <p class="sc-k" id="scK">Что сделаем</p>
+    <h3 class="sc-h" id="scH">Развал-схождение 3D</h3>
+    <p class="sc-p" id="scP">Камеры стенда читают мишени на&nbsp;колёсах и&nbsp;сверяют углы с&nbsp;базой параметров вашей модели. Выставляем в&nbsp;допуск завода.</p>
+    <p class="sc-price"><span class="sc-pk" id="scPk">Цена</span><b id="scPrice">1&nbsp;200&nbsp;₽</b></p>
+    <a class="btn" id="scWant" href="#" target="_blank" rel="noopener"><span>Записаться с&nbsp;этим</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- УСЛУГИ И ЦЕНЫ -->
+<section class="svc" id="uslugi">
+ <div class="wrap">
+  <div class="sec-head sec-head-row">
+   <div>
+    <p class="eyebrow">02 · Услуги</p>
+    <h2 class="h2">Всё, что нужно машине, в&nbsp;одном боксе</h2>
+   </div>
+   <p class="lead">От&nbsp;замены масла до&nbsp;капитального ремонта двигателя. Запчасти есть на&nbsp;складе, чего нет&nbsp;— закажем.</p>
+  </div>
+
+  <div class="svc-grid">
+   <figure class="svc-pic"><img src="assets/img/s-engine.webp" width="1024" height="1280" alt="Двигатель на стенде во время ремонта" loading="lazy"></figure>
+   <div class="svc-cols">
+    <div class="svc-g">
+     <h3>Двигатель</h3>
+     <ul><li>Диагностика двигателя и&nbsp;электронных систем</li><li>Ремонт двигателя, в&nbsp;том числе капитальный</li><li>Замена двигателя и&nbsp;КПП</li><li>Ремень ГРМ, свечи, подушки двигателя</li><li>Радиаторы охлаждения</li><li>Промывка топливной системы</li></ul>
+    </div>
+    <div class="svc-g">
+     <h3>Ходовая и&nbsp;тормоза</h3>
+     <ul><li>Диагностика ходовой&nbsp;— бесплатно при ремонте</li><li>Стойки, пружины, рычаги, шаровые</li><li>Сайлент-блоки, пыльники, ступичные подшипники</li><li>Колодки и&nbsp;диски, проточка без снятия</li><li>Ремонт и&nbsp;замена рулевых реек</li><li>Развал-схождение 3D</li></ul>
+    </div>
+    <div class="svc-g">
+     <h3>Масла и&nbsp;жидкости</h3>
+     <ul><li>Масло двигателя, АКПП, МКПП</li><li>Жидкость вариатора и&nbsp;ГУР</li><li>Тормозная и&nbsp;охлаждающая жидкость</li><li>Фильтры</li></ul>
+    </div>
+    <div class="svc-g">
+     <h3>Электрика и&nbsp;климат</h3>
+     <ul><li>Компьютерная диагностика, сканирование ошибок</li><li>Ремонт стартеров и&nbsp;генераторов</li><li>Заправка и&nbsp;ремонт кондиционеров</li><li>Автосигнализации</li></ul>
+    </div>
+    <div class="svc-g">
+     <h3>Шины</h3>
+     <ul><li>Шиномонтаж и&nbsp;балансировка</li><li>Хранение шин</li></ul>
+    </div>
+    <div class="svc-g">
+     <h3>Запчасти</h3>
+     <ul><li>Двигатель, тормоза, подвеска, охлаждение, рулевое</li><li>Контрактные агрегаты: ДВС, АКПП, МКПП</li><li>Под заказ&nbsp;— если нужной детали нет</li></ul>
+    </div>
+   </div>
+  </div>
+
+  <div class="price" id="ceny">
+   <div class="price-h">
+    <h3 class="h3">Цены</h3>
+    <p class="note">Ориентир по&nbsp;работам. Точную стоимость мастер скажет после осмотра&nbsp;— до&nbsp;начала ремонта.</p>
+   </div>
+   <table class="ptab">
+    <caption class="sr">Цены на работы</caption>
+    <tbody>
+     <tr><th scope="row">Замена масла</th><td>400&nbsp;₽</td></tr>
+     <tr><th scope="row">Развал-схождение 3D</th><td>1&nbsp;200&nbsp;₽</td></tr>
+     <tr><th scope="row">Проточка тормозных дисков без снятия</th><td>2&nbsp;200&nbsp;₽</td></tr>
+     <tr><th scope="row">Заправка кондиционера</th><td>2&nbsp;500&nbsp;₽</td></tr>
+     <tr><th scope="row">Промывка топливных форсунок</th><td>2&nbsp;500&nbsp;₽</td></tr>
+     <tr><th scope="row">Промывка радиатора отопителя</th><td>2&nbsp;500&nbsp;₽</td></tr>
+     <tr><th scope="row">Диагностика ходовой при дальнейшем ремонте</th><td>0&nbsp;₽</td></tr>
+    </tbody>
+   </table>
+  </div>
+ </div>
+</section>
+
+<!-- АВТОПАРКАМ -->
+<section class="park" id="park">
+ <picture class="park-media">
+  <source media="(max-aspect-ratio: 4/5)" srcset="assets/img/fleet-tall.webp" width="1024" height="1536">
+  <img class="park-img" src="assets/img/fleet-wide.webp" width="1536" height="1024" alt="Белые фургоны у здания автосервиса зимним вечером" loading="lazy">
+ </picture>
+ <div class="wrap park-in">
+  <div class="park-t">
+   <p class="eyebrow">03 · Для организаций</p>
+   <h2 class="h2">Автопарк, который не&nbsp;стоит в&nbsp;очереди</h2>
+   <p class="lead">Обслуживаем по&nbsp;договору машины любых марок&nbsp;— от&nbsp;«Оки» до&nbsp;Mercedes Sprinter и&nbsp;Vito.</p>
+  </div>
+  <table class="ctab">
+   <caption class="sr">Условия для организаций</caption>
+   <tbody>
+    <tr><th scope="row">Очередь</th><td>Приоритетное обслуживание вне очереди</td></tr>
+    <tr><th scope="row">Цены</th><td>Фиксированный прайс и&nbsp;скидки на&nbsp;обслуживание</td></tr>
+    <tr><th scope="row">Запчасти</th><td>Специальные цены</td></tr>
+    <tr><th scope="row">Отсрочка</th><td>От&nbsp;1&nbsp;недели до&nbsp;1&nbsp;месяца</td></tr>
+    <tr><th scope="row">Оплата</th><td>Наличный и&nbsp;безналичный расчёт</td></tr>
+    <tr><th scope="row">Работы</th><td>ТО, диагностика, двигатель, ходовая, тормоза, электрика</td></tr>
+   </tbody>
+  </table>
+  <div class="park-cta">
+   <a class="btn" href="#" data-wa="Здравствуйте! Мы организация, хотим обсудить договор на обслуживание автопарка." target="_blank" rel="noopener"><span>Обсудить договор</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+   <a class="link" href="mailto:abakanavtodetal@mail.ru?subject=Обслуживание автопарка">abakanavtodetal@mail.ru</a>
+  </div>
+ </div>
+</section>
+
+<!-- ОТЗЫВЫ -->
+<section class="rev" id="otzyvy">
+ <div class="wrap rev-head">
+  <div class="rev-score"><span class="big">4,7</span><span class="rs-t">в&nbsp;2ГИС<br>259&nbsp;отзывов</span></div>
+  <h2 class="h2">Пишут не&nbsp;мы&nbsp;— пишут клиенты</h2>
+ </div>
+ <div class="mq" aria-label="Отзывы из 2ГИС">
+  <div class="mq-track">
+   <figure class="q"><blockquote>Побрякивало в&nbsp;подвеске, всё исправили, лишнего не&nbsp;навязали, всё по&nbsp;делу.</blockquote><figcaption>сентябрь 2026 · 2ГИС</figcaption></figure>
+   <figure class="q"><blockquote>По&nbsp;трассе порвался приводной ремень. Кое-как дотянул до&nbsp;ЦентрАвто. Машину загнали, ремень привезли, поменяли.</blockquote><figcaption>июль 2026 · 2ГИС</figcaption></figure>
+   <figure class="q"><blockquote>Отличный сервис для японских машин. Качественно отремонтировали подвеску, сделали быстрый развал-схождение и&nbsp;по&nbsp;честной цене.</blockquote><figcaption>январь 2026 · 2ГИС</figcaption></figure>
+   <figure class="q"><blockquote>Приехал на&nbsp;диагностику подвески перед дальней дорогой. Нашли стук, который сам не&nbsp;мог определить.</blockquote><figcaption>февраль 2026 · 2ГИС</figcaption></figure>
+   <figure class="q"><blockquote>Меняла масло в&nbsp;двигателе. Мастер отвечал на&nbsp;все мои вопросы. Быстро, аккуратно, качественно.</blockquote><figcaption>сентябрь 2026 · 2ГИС</figcaption></figure>
+   <figure class="q"><blockquote>Поменяли компрессор кондиционера, заправили, проверили. Понравилось всё, что может понравиться на&nbsp;СТО.</blockquote><figcaption>май 2026 · 2ГИС</figcaption></figure>
+   <figure class="q"><blockquote>Развал-схождение сделали чётко, машина на&nbsp;газу теперь ведёт себя предсказуемо.</blockquote><figcaption>февраль 2026 · 2ГИС</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<!-- ЗАПИСЬ -->
+<section class="book" id="zapis">
+ <div class="wrap book-in">
+  <div class="book-t">
+   <p class="eyebrow">04 · Запись</p>
+   <h2 class="h2">Запись без&nbsp;звонка</h2>
+   <p class="lead">Заполните три поля&nbsp;— откроется WhatsApp с&nbsp;готовым сообщением мастеру. Ответим в&nbsp;рабочее время.</p>
+  </div>
+  <form class="bform" id="bform" novalidate>
+   <label class="f"><span>Машина</span><input name="car" type="text" placeholder="Например, Toyota RAV4, 2014" autocomplete="off"></label>
+   <label class="f"><span>Что беспокоит</span>
+    <select name="what" id="bWhat">
+     <option>Развал-схождение</option><option>Стук в подвеске</option><option>Замена масла</option><option>Кондиционер</option><option>Тормоза</option><option>Двигатель</option><option>Компьютерная диагностика</option><option>Стартер или генератор</option><option>Шиномонтаж</option><option>Другое</option>
+    </select>
+   </label>
+   <fieldset class="f chips"><legend>Когда удобно</legend>
+    <label><input type="radio" name="when" value="сегодня" checked><span>Сегодня</span></label>
+    <label><input type="radio" name="when" value="завтра"><span>Завтра</span></label>
+    <label><input type="radio" name="when" value="на этой неделе"><span>На&nbsp;неделе</span></label>
+   </fieldset>
+   <button class="btn btn-wide" type="submit"><span>Открыть WhatsApp</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+   <p class="f-note">Или позвоните: <a href="tel:+79020111156">+7 902 011-11-56</a>, <a href="tel:+79020111157">+7 902 011-11-57</a></p>
+  </form>
+ </div>
+</section>
+
+<!-- КОНТАКТЫ -->
+<section class="visit" id="kontakty">
+ <figure class="visit-media"><img src="assets/img/night-door.webp" width="1536" height="1024" alt="Ворота бокса открываются, во двор заезжает машина" loading="lazy"></figure>
+ <div class="wrap visit-in">
+  <div class="visit-l">
+   <p class="eyebrow">05 · Как доехать</p>
+   <h2 class="h2">Промышленная, 31в</h2>
+   <p class="lead">Первый этаж, рядом с&nbsp;магазином «Пилон». Пять минут пешком от&nbsp;Центрального рынка.</p>
+   <div class="visit-btns">
+    <a class="btn" href="https://2gis.ru/abakan/firm/70000001030788963" target="_blank" rel="noopener"><span>Маршрут в&nbsp;2ГИС</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+    <a class="btn btn-ghost" href="https://yandex.ru/maps/?rtext=~53.71635,91.454745" target="_blank" rel="noopener"><span>Яндекс Карты</span></a>
+   </div>
+  </div>
+  <dl class="visit-r">
+   <div><dt>Режим</dt><dd>Пн–Сб 9:00–18:00<br>Воскресенье&nbsp;— выходной</dd></div>
+   <div><dt>Телефоны</dt><dd><a href="tel:+79020111156">+7 902 011-11-56</a><br><a href="tel:+79020111157">+7 902 011-11-57</a></dd></div>
+   <div><dt>Мессенджеры</dt><dd><a href="#" data-wa="Здравствуйте!" target="_blank" rel="noopener">WhatsApp</a> · <a href="https://t.me/+79235966667" target="_blank" rel="noopener">Telegram</a></dd></div>
+   <div><dt>Почта</dt><dd><a href="mailto:abakanavtodetal@mail.ru">abakanavtodetal@mail.ru</a></dd></div>
+   <div><dt>Оплата</dt><dd>Карта, наличные, QR, безнал</dd></div>
+   <div><dt>Пока ждёте</dt><dd>Wi‑Fi для клиентов</dd></div>
+  </dl>
+ </div>
+</section>
+</main>
+
+<footer class="foot">
+ <div class="wrap foot-in">
+  <p class="foot-word" aria-hidden="true">ЦентрАвто</p>
+  <div class="foot-row">
+   <span>© 2026 ЦентрАвто, Абакан</span>
+   <span>ИП Иванов А.&nbsp;А.</span>
+   <a href="#hero">Наверх ↑</a>
+  </div>
+ </div>
+</footer>
+
+<a class="fab" href="#zapis" aria-label="Записаться"><span>Записаться</span></a>
+
+<script src="assets/js/gsap.min.js" defer></script>
+<script src="assets/js/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/lenis.min.js" defer></script>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
